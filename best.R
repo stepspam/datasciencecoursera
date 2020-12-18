@@ -30,7 +30,9 @@ best <- function(state,outcome) {
     outcome_all <- outcome_all[c(1,2,5)]
   }
   #make numeric & exclude NA.
+  suppressWarnings(
   outcome_all[,3] <- as.numeric(outcome_all[,3])
+  )
   outcome_all <- na.omit(outcome_all)
   #outcome_all <- outcome_all[!()]
   
